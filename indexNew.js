@@ -1,3 +1,4 @@
+/* ===== Banner ===== */
 const bannerSwiper = new Swiper(".bannerSwiper", {
   loop: true,
   navigation: {
@@ -6,20 +7,22 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
   },
   mousewheel: true,
   keyboard: true,
+  autoHeight: true,   // 自動高度配合圖片
 });
-	/* ===== Focus ===== */
+
+/* ===== Focus ===== */
 const focusSwiper = new Swiper(".focusSwiper", {
-  
-    slidesPerView: "auto",
-  spaceBetween: 30,        // 片之間間距
-  loop: false,             // 可改 true 看是否需要無限循環
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: false,
   navigation: {
     nextEl: ".focusSwiper .focus-next",
     prevEl: ".focusSwiper .focus-prev",
   },
+  autoHeight: true,
 });
-	
-	/* ===== Shorts ===== */
+
+/* ===== Shorts ===== */
 const shortsSwiper = new Swiper(".shortsSwiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
@@ -29,14 +32,15 @@ const shortsSwiper = new Swiper(".shortsSwiper", {
     delay: 2000,
     disableOnInteraction: false,
   },
+  autoHeight: true,
 });
 
 /* ===== Doctor ===== */
 const doctorSwiper = new Swiper(".doctorSwiper", {
-   slidesPerView: "auto",
+  slidesPerView: "auto",
   spaceBetween: 30,
-loop: true,
-	 autoplay: {
+  loop: true,
+  autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
@@ -44,6 +48,7 @@ loop: true,
     nextEl: ".doctorSwiper .doctor-next",
     prevEl: ".doctorSwiper .doctor-prev",
   },
+  autoHeight: true,
 });
 
 /* ===== Case ===== */
@@ -65,6 +70,7 @@ const caseSwiper = new Swiper(".caseSwiper", {
     el: ".caseSwiper .swiper-pagination",
     clickable: true,
   },
+  autoHeight: true,
 });
 
 /* ===== KOL ===== */
@@ -78,54 +84,34 @@ const kolSwiper = new Swiper(".kolSwiper", {
   },
   speed: 800,
   grabCursor: true,
-	 navigation: {
+  navigation: {
     nextEl: ".kolSwiper .kol-next",
     prevEl: ".kolSwiper .kol-prev",
   },
+  autoHeight: true,
 });
 
-//影片
-// 取得元素
+/* ===== Video Modal ===== */
 const modal = document.getElementById("videoModal");
 const iframe = modal.querySelector("iframe");
 const closeBtn = modal.querySelector(".close-btn");
 
-
-// 點擊縮圖 → 開啟影片
 document.querySelectorAll(".video-card").forEach(card => {
-
   card.addEventListener("click", function () {
-
     const videoSrc = this.dataset.videoSrc;
-
     iframe.src = videoSrc + "?autoplay=1&rel=0";
-
     modal.style.display = "flex";
-
   });
-
 });
 
-
-// 關閉按鈕
 closeBtn.addEventListener("click", function () {
-
   modal.style.display = "none";
-
   iframe.src = "";
-
 });
 
-
-// 點擊背景關閉
 modal.addEventListener("click", function (e) {
-
   if (e.target === modal) {
-
     modal.style.display = "none";
-
     iframe.src = "";
-
   }
-
 });
