@@ -1,38 +1,50 @@
 @charset "UTF-8";
+
+/* ================= 基本設定 ================= */
 html, body {
   overflow-x: hidden;
-  /* 最保險 */ }
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+}
 
 ol {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
+/* ================= 文字樣式 ================= */
 .s-text-pink {
   text-align: center;
   color: #e196be;
-  margin-top: 4px; }
+  margin-top: 4px;
+}
 
 .s-text-gray {
   color: #909193;
-  text-align: center; }
-
-.s-kol {
-  width: 160px; }
-  .s-kol img {
-    border: solid 4px #FFFFFF;
-    width: 100%; }
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap; /* 防止名字斷行 */
+}
 
 .s-title {
   font-size: 36px;
-  color: #e64497; }
+  color: #e64497;
+}
 
 .s-subtitle {
   font-size: 36px;
-  color: #202528; }
+  color: #202528;
+}
 
 .s-explanationTitle {
   font-size: 16px;
-  color: #202528; }
+  color: #202528;
+}
 
+/* ================= 按鈕樣式 ================= */
 .s-pinkBtn {
   width: 160px;
   height: 40px;
@@ -42,563 +54,138 @@ ol {
   margin-bottom: 0px;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .s-pinkBtn a {
-    text-decoration: none; }
-    .s-pinkBtn a p {
-      font-size: 16px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 0px;
-      color: white; }
+  justify-content: center;
+}
+.s-pinkBtn a {
+  text-decoration: none;
+}
+.s-pinkBtn a p {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0px;
+  color: white;
+}
 
-.pinkBackground {
-  background: linear-gradient(150deg, #ffe6e6 0%, rgba(210, 210, 240, 0.8) 100%);
+/* ================= 背景 ================= */
+.pinkBackground, .pinkBackgroundCase, .caseBackgroung {
   padding-top: 120px;
   padding-bottom: 120px;
-  position: relative; }
-  .pinkBackground .safeWordShort {
-    bottom: 0;
-    padding: 4px;
-    position: absolute;
-    color: white;
-    right: 0; }
-  .pinkBackground .setStarRight {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    right: 100px;
-    /* 左邊對齊 */
-    top: 46px;
-    /* 底部對齊 */
-    width: 60px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    z-index: 5;
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackground .setStarRight02 {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    right: 180px;
-    /* 左邊對齊 */
-    top: 80px;
-    /* 底部對齊 */
-    width: 24px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    z-index: 5;
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackground .setStarRight, .pinkBackground .setStarRight02 path {
-    stroke: white;
-    /* 線條顏色 */
-    stroke-width: 1;
-    fill: none; }
-  .pinkBackground .svgSet {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    left: 0;
-    /* 左邊對齊 */
-    bottom: -20px;
-    /* 底部對齊 */
-    width: 300px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackground .svgSetLine {
-    position: absolute;
-    left: 0;
-    bottom: 56px;
-    width: 100vw;
-    /* 滿整個螢幕寬 */
-    height: auto;
-    /* 控制 SVG 高度 */
-    display: block;
-    pointer-events: none;
-    z-index: 5; }
-  .pinkBackground .svgSetLine line {
-    stroke: white;
-    stroke-width: 1; }
-  .pinkBackground .svgSet path {
-    stroke: white;
-    /* 線條顏色 */
-    stroke-width: 1;
-    fill: none; }
-  .pinkBackground .svgStar {
-    position: absolute;
-    left: 100px;
-    /* 可以調整水平位置 */
-    bottom: 150px;
-    /* 調整垂直位置 */
-    width: 40px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackground .svgStar02 {
-    position: absolute;
-    left: 180px;
-    /* 可以調整水平位置 */
-    bottom: 90px;
-    /* 調整垂直位置 */
-    width: 30px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackground .svgStar03 {
-    position: absolute;
-    left: 340px;
-    /* 可以調整水平位置 */
-    bottom: 35px;
-    /* 調整垂直位置 */
-    width: 45px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackground .svgStar, .pinkBackground .svgStar02, .pinkBackground .svgStar03 path {
-    fill: white;
-    /* 星星填滿白色 */
-    stroke-width: 1;
-    stroke: none;
-    /* 如果不要描邊 */ }
-
-.pinkBackgroundCase {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: linear-gradient(150deg, #ffe6e6 0%, rgba(210, 210, 240, 0.8) 100%);
-  position: relative; }
-  .pinkBackgroundCase .safeWord {
-    bottom: 0;
-    padding: 4px;
-    position: absolute;
-    color: white;
-    right: 0; }
-  .pinkBackgroundCase .setStarRight {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    right: 100px;
-    /* 左邊對齊 */
-    top: 38px;
-    /* 底部對齊 */
-    width: 60px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    z-index: 5;
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackgroundCase .setStarRight02 {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    right: 180px;
-    /* 左邊對齊 */
-    top: 75px;
-    /* 底部對齊 */
-    width: 24px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    z-index: 5;
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackgroundCase .setBeautifulWitness {
-    position: absolute;
-    right: 129px;
-    top: 100px;
-    width: 40px;
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    z-index: 5;
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackgroundCase .setStarRight02 {
-    stroke: white;
-    /* 線條顏色 */
-    stroke-width: 1;
-    fill: none; }
-  .pinkBackgroundCase .setStarRight, .pinkBackgroundCase .setBeautifulWitness path {
-    stroke: white;
-    /* 線條顏色 */
-    stroke-width: 1;
-    fill: white; }
-  .pinkBackgroundCase .svgSet {
-    position: absolute;
-    /* 相對於 .pinkBackground */
-    left: 0;
-    /* 左邊對齊 */
-    bottom: -20px;
-    /* 底部對齊 */
-    width: 300px;
-    /* 調整大小 */
-    height: auto;
-    pointer-events: none;
-    /* 不影響滑鼠操作 */
-    /* 避免被其他元素蓋住 */ }
-  .pinkBackgroundCase .svgSetLine {
-    position: absolute;
-    left: 0;
-    bottom: 56px;
-    width: 100vw;
-    /* 滿整個螢幕寬 */
-    height: auto;
-    /* 控制 SVG 高度 */
-    display: block;
-    pointer-events: none;
-    z-index: 5; }
-  .pinkBackgroundCase .svgSetLine line {
-    stroke: white;
-    stroke-width: 1; }
-  .pinkBackgroundCase .svgSet path {
-    stroke: white;
-    /* 線條顏色 */
-    stroke-width: 1;
-    fill: none; }
-  .pinkBackgroundCase .svgStar {
-    position: absolute;
-    left: 100px;
-    /* 可以調整水平位置 */
-    bottom: 150px;
-    /* 調整垂直位置 */
-    width: 40px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackgroundCase .svgStar02 {
-    position: absolute;
-    left: 180px;
-    /* 可以調整水平位置 */
-    bottom: 90px;
-    /* 調整垂直位置 */
-    width: 30px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackgroundCase .svgStar03 {
-    position: absolute;
-    left: 340px;
-    /* 可以調整水平位置 */
-    bottom: 35px;
-    /* 調整垂直位置 */
-    width: 45px;
-    /* 星星大小 */
-    height: auto;
-    pointer-events: none;
-    z-index: 6;
-    /* 放在線條 SVG 上方 */ }
-  .pinkBackgroundCase .svgStar, .pinkBackgroundCase .svgStar02, .pinkBackgroundCase .svgStar03 path {
-    fill: white;
-    /* 星星填滿白色 */
-    stroke-width: 1;
-    stroke: none;
-    /* 如果不要描邊 */ }
-
-.caseBackgroung {
-  padding-top: 100px;
-  padding-bottom: 120px;
-  background: linear-gradient(150deg, #ffe6e6 0%, rgba(210, 210, 240, 0.8) 100%); }
-
-html, body {
   position: relative;
-  height: 100%; }
+  background: linear-gradient(150deg, #ffe6e6 0%, rgba(210, 210, 240, 0.8) 100%);
+}
 
-body {
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
+/* ================= Swiper ================= */
 
-.bannerSwiper {
-  padding: 0; }
-
-.focusSwiper {
-  padding: 50px 0; }
-
-.caseSwiper {
-  padding: 50px 0; }
-
+/* Banner */
 .bannerSwiper .swiper-slide img {
   width: 100%;
-  height: auto;
-  display: block; }
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
 
+/* Focus */
+.focusSwiper .swiper-slide {
+  width: 480px;
+  height: 300px;
+}
+.focusSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Shorts */
+.shortsSwiper .swiper-slide {
+  width: 300px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: #e6e6f0;
+  overflow: hidden;
+}
+.shortsSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Doctor */
+.doctorSwiper .swiper-slide {
+  width: 240px;
+  aspect-ratio: 3 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.doctorSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Case */
 .caseSwiper .swiper-wrapper .swiper-slide {
+  width: 480px;
+  height: 480px;
   background-position: center;
   background-size: cover;
-  width: 480px;
-  height: 480px; }
-
+}
 .caseSwiper .swiper-wrapper .swiper-slide img {
-  display: block;
-  width: 100%; }
-
-.kolSwiper {
   width: 100%;
-  padding: 20px 0; }
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+/* KOL */
 .kolSwiper .swiper-slide {
   width: 160px;
-  /* 你要求的固定寬度 */
   display: flex;
-  justify-content: center; }
-
-.s-kol {
-  text-align: center;
-  width: 100%; }
-
-/* 圓形圖片處理 */
+  justify-content: center;
+}
 .s-kol img.rounded-circle {
   width: 100%;
-  /* 稍微小於 160px 留點呼吸空間 */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
   border: 2px solid #eee;
-  /* 選擇性：增加一點質感 */ }
+}
 
-.s-text-gray {
-  color: #666;
-  font-size: 14px;
-  white-space: nowrap;
-  /* 防止名字斷行 */ }
-
-.focusSwiper .swiper-slide {
-  width: 480px; }
-
-.focusSwiper .swiper-slide img {
-  border-radius: 12px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block; }
-
-.doctorSwiper {
-  padding: 50px 0; }
-
-.doctorSwiper .swiper-slide {
-  position: relative;
-  width: 240px;
-  aspect-ratio: 3 / 5;
-  border-radius: 12px; }
-
-.doctorSwiper .swiper-wrapper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%; }
-
-.shortsSwiper .swiper-slide {
-  position: relative;
-  width: 300px;
-  border-radius: 12px;
-  background-color: #e6e6f0; }
-
-.shortsSwiper .swiper-wrapper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%; }
-
+/* ================= 卡片、影片 ================= */
 .card-link {
   display: block;
   position: relative;
-  overflow: hidden; }
-
+  overflow: hidden;
+  text-decoration: none;
+}
 .card-link img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; }
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(115, 90, 170, 0.8) 100%); }
-
-.overlay h3 {
-  position: absolute;
-  bottom: 20px;
-  left: 16px;
-  color: white; }
-
-.overlay h3 .dr-intro {
-  font-size: 12px;
-  color: white; }
-
-.teamWrapper {
-  height: 450px;
-  background: linear-gradient(150deg, #ffe6e6 0%, rgba(210, 210, 240, 0.8) 100%);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* 垂直居中 */
-  align-items: center;
-  /* 水平居中 */
-  overflow: hidden;
-  border-radius: 50px; }
-
-.teamRow {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-wrap: nowrap; }
-
-/* 第一排 */
-.row1 a img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  margin-left: -60px;
-  transition: transform 0.3s;
-  z-index: 1; }
-
-/* 修正這裡 */
-.row1 a:first-child img {
-  margin-left: 0; }
-
-/* 第二排 */
-.row2 {
-  z-index: 100;
-  margin-top: -170px; }
-
-.row2 a img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  margin-left: -60px;
-  transition: transform 0.3s; }
-
-/* 修正這裡 */
-.row2 a:first-child img {
-  margin-left: 0; }
-
-/* hover 效果 */
-.row1 a img:hover {
-  transform: scale(1.1);
-  z-index: 1; }
-
-.row2 a img:hover {
-  transform: scale(1.1);
-  z-index: 200; }
-
-.fwdoctorSection {
-  margin-bottom: 60px; }
-
-.femaleTitle {
-  right: 8%;
-  top: 30%; }
-
-.btnContact {
-  width: 300px;
-  height: 70px;
-  background: linear-gradient(90deg, #fa78b4 -10%, #e74291 100%);
-  text-align: center;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 50px auto; }
-  .btnContact a {
-    font-size: 24px;
-    text-decoration: none; }
-    .btnContact a span {
-      color: white; }
-    .btnContact a i {
-      margin-left: 12px;
-      color: white; }
-
-.pinkBackgroundKol {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, white 100%), linear-gradient(150deg, #fff0f0 0%, rgba(240, 240, 250, 0.3) 100%); }
-
-.footerBackground {
-  background: linear-gradient(90deg, #f5a7ce -10%, #e89dc8 100%); }
-  .footerBackground p {
-    padding: 20px 40px; }
-
-.footerSec {
-  padding: 30px 40px;
-  border-bottom: solid 2px #d3d3d3; }
-  .footerSec .footerLogo {
-    width: 190px;
-    height: 50px; }
-  .footerSec p {
-    margin-left: 20px;
-    color: #010101;
-    margin-bottom: 0px;
-    font-weight: 700; }
-  .footerSec .phoneNumber {
-    color: #e23d8c;
-    font-size: 36px;
-    font-weight: 900;
-    text-align: end; }
-
-.footerThird {
-  padding: 5px 40px; }
-  .footerThird ul li a {
-    font-size: 24px; }
-    .footerThird ul li a i {
-      color: #ea4391; }
-
-/* 藍色改紅色 */
-.caseSwiper .swiper-pagination-bullet-active {
-  background-color: #eb3d92; }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: rgba(255, 255, 255, 0.3);
-  /* 改箭頭顏色 */ }
-
-.swiper-button-next:active,
-.swiper-button-prev:active {
-  color: #eb3d92;
-  /* Swiper 預設箭頭就是 ::after 文字符號 */ }
-
-.card-link {
   display: block;
-  /* 讓 a 包住整個內容 */
-  text-decoration: none;
-  /* 移除下劃線 */ }
+}
 
-.video-thumb {
-  cursor: pointer; }
-
-.video-thumb img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-/* 縮圖 */
+/* 視頻卡 */
 .video-card {
   width: 478px;
   height: 849px;
   cursor: pointer;
   overflow: hidden;
-  position: relative; }
-
+  position: relative;
+}
 .video-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  display: block;
+}
 
-/* Modal 背景 */
+/* ================= Modal 影片 ================= */
 .video-modal {
   display: none;
   position: fixed;
@@ -609,9 +196,9 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
-/* Modal 內容 */
 .video-modal-content {
   position: relative;
   width: 400px;
@@ -619,28 +206,46 @@ body {
   background: #000;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  animation: popup 0.3s ease; }
+  animation: popup 0.3s ease;
+}
 
-/* iframe 比例 */
 .video-modal-content iframe {
   width: 100%;
   height: 711px;
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
-/* 關閉按鈕 */
 .video-close {
   position: absolute;
   top: -40px;
   right: 0;
   font-size: 40px;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* 動畫 */
 @keyframes popup {
   from {
     transform: scale(0.8);
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
     transform: scale(1);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
+
+/* ================= Swiper 控制按鈕 ================= */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(255, 255, 255, 0.3);
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: #eb3d92;
+}
+
+/* Swiper 分頁點 active */
+.caseSwiper .swiper-pagination-bullet-active {
+  background-color: #eb3d92;
+}
